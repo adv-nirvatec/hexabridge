@@ -14,18 +14,22 @@ Final generation prompt:
 
 Billing, electronic receipt, identity and collections diagrams are original HTML/CSS/SVG compositions, clearly marked as illustrative. They are not screenshots of partner software. The EOR receipt is marked as a demonstration and is not valid for transactions. Motion includes floating hero cards, signal bars, payment flow traces, a billing chart, an identity scan and section reveals. Pause motion and system reduced-motion preferences are supported.
 
-## Partner content
+## Current local review
+
+HexaBridge is the focus of the approved revision. The former partner ribbon, product catalogue, large partnership graphic and Philippine project summaries have been removed. SurePay appears in one strategic partnership section with one outbound link. Payments and receipt artwork now illustrate HexaBridge solution areas, rather than branded partner products. The company narrative covers solutions, discovery, design, partner coordination, implementation and support. No future partners are named. The owner approved this version on 11 November 2026 for GitHub publication and an OpenClaw deployment handoff.
+
+## Partner reference sources
 
 Partnership for PNG deployments was supplied by the owner. Product descriptions were checked against SurePay's own website on 11 November 2026:
 
 - https://www.surepayinc.com.ph/ — overall product portfolio.
 - https://www.surepayinc.com.ph/products/surebill — payment acceptance, billing, collections, disbursements and reporting.
 - https://www.surepayinc.com.ph/products/bayanpay-kiosk — walk-in public-service payment points and collections monitoring.
-- https://www.surepayinc.com.ph/products/eor-design-solution — electronic official receipt issuance, recording, transaction traceability, reporting and integration with payment/treasury systems. Replaces DocuTrust in the showcase.
+- https://www.surepayinc.com.ph/products/eor-design-solution — background for electronic receipt issuance, recording, transaction traceability, reporting and integration with payment/treasury systems.
 - https://www.surepayinc.com.ph/products/identriq — emerging identity platform; fingerprint, facial and signature verification; availability subject to discussion.
 - https://www.surepayinc.com.ph/projects/lift — SurePay/Amellar system development under the ADB-funded Philippine Local Government Reform Project.
 - The owner-supplied `Surepay Company Profile SEPT 2026.pdf`, physical pages 8–10 (printed pages 06–08): EOR Design Solution in the portfolio, the proposed National Electronic Official Receipt System and the LIFT development project. Physical page 11 also identifies electronic-receipt design in the company's milestones.
 
-The National Electronic Official Receipt System is explicitly described as a **proposed Philippine initiative**, with SurePay as PPP co-proponent. The profile states that DOF–BLGF accepted the proposal; this is not represented as an operational national rollout. LIFT appears as partner public-finance experience, not as a ready-to-deploy PNG product. No partner client counts, certifications, licensing claims or Philippine government deployments are presented as HexaBridge or PNG achievements. Inconsistent LGU counts across profile sections are omitted.
+The source profile describes the National Electronic Official Receipt System as a proposed Philippine initiative, and LIFT as Philippine public-finance work. Neither project is featured in the current local revision. No partner client counts, certifications, licensing claims or Philippine government deployments are presented as HexaBridge or PNG achievements.
 
 The partner profile is reference material only and has not been uploaded as a public website download. The inquiry selector and server allowlist both include Electronic official receipts (EOR).

@@ -1,0 +1,27 @@
+# Example only: verify Node path, service account and directories before use.
+# Prefer the server's existing process manager when already established.
+# EnvironmentFile is read by systemd; do not commit actual credentials.
+[Unit]
+Description=HexaBridge corporate website
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=hexabridge
+Group=hexabridge
+WorkingDirectory=/srv/hexabridge/current
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/hexabridge/website.env
+ExecStart=/usr/bin/node /srv/hexabridge/current/server.mjs
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

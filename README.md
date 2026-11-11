@@ -1,5 +1,5 @@
 # HexaBridge website
-Fintech-focused corporate website for HexaBridge Technologies Ltd, for local visual approval before OpenClaw deploys to Tencent Lighthouse.
+Approved corporate website for HexaBridge Technologies Ltd, ready for OpenClaw deployment to Tencent Lighthouse.
 
 ## Local preview
 Requires Node.js 22.9+ and pnpm.
@@ -10,7 +10,9 @@ Requires Node.js 22.9+ and pnpm.
 There is no front-end build step. The Node server serves the public files and handles the inquiry endpoint. Do not expose this entire checkout with a generic static server in production: it contains server source and deployment files.
 
 ## Approval and email status
-The visual upgrade is awaiting owner approval. Do not deploy automatically on push.
+The owner approved this version on 11 November 2026 (Asia/Manila) and requested its publication to GitHub and a deployment handoff for OpenClaw. HexaBridge's solutions and delivery process lead the site. SurePay appears only in one strategic partnership section; branded product catalogues and Philippine project summaries have been removed. Deployment itself has not been performed by Codex.
+
+**OpenClaw: start with [OPENCLAW_DEPLOYMENT.md](OPENCLAW_DEPLOYMENT.md).** It covers target discovery, a pinned release, process management, DNS/HTTPS, mail setup, acceptance checks and rollback.
 
 The inquiry recipient is **inquire@hexabridge.com**, as specified by the owner. No real email was tested locally, at the owner's request. Until SMTP is configured, submissions return an honest “not yet connected” message. No inquiry content is written to disk.
 
@@ -42,6 +44,6 @@ Rate limits are in memory per server process; use a single app instance or add s
 Desktop and phone visual checks cover navigation, interactive journey panels, keyboard controls, privacy dialog, motion pause and responsive overflow. SMTP credentials and production delivery remain OpenClaw's deployment task.
 
 ## Content and artwork
-See `ASSETS.md` for the generated image's prompt, provenance, source links and boundaries of partner claims. SurePay products are partner platforms for discovery, not claims that they are deployed or licensed in PNG. EOR Design Solution replaces DocuTrust in the showcase. The proposed Philippine national EOR initiative and LIFT development project are separately identified as partner experience. The original HexaBridge corporate profile remains downloadable; the partner's supplied PDF is not published.
+See `ASSETS.md` for the generated image's prompt, provenance and source notes. Solutions are presented around client needs: payments and collections, electronic receipts, digital government, enterprise applications and integration, cloud services, and data automation. The collections walkthrough is illustrative. The partnership section supports selected solutions without implying PNG licensing or existing deployments. The original HexaBridge corporate profile remains downloadable; the partner's supplied PDF is not published.
 
 Fonts are requested from Google Fonts with local fallbacks. No analytics, advertising cookies or tracking integrations are configured.
