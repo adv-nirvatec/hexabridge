@@ -122,14 +122,14 @@ form.addEventListener('submit', async event => {
       signal: AbortSignal.timeout(35000)
     });
     const result = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(result.message || 'Your inquiry could not be sent. Please email inquire@hexabridge.com or try again.');
+    if (!response.ok) throw new Error(result.message || 'Your inquiry could not be sent. Please email inquire@hexabridgepng.com or try again.');
     status.classList.add('success');
     status.textContent = 'Thank you. Your inquiry has been sent to HexaBridge. We’ll respond using the contact details you provided.';
     form.reset();
   } catch (error) {
     status.textContent = error.name === 'TimeoutError'
-      ? 'Delivery could not be confirmed. Please email inquire@hexabridge.com before sending again.'
-      : error.message || 'We couldn’t send your inquiry. Please email inquire@hexabridge.com.';
+      ? 'Delivery could not be confirmed. Please email inquire@hexabridgepng.com before sending again.'
+      : error.message || 'We couldn’t send your inquiry. Please email inquire@hexabridgepng.com.';
   } finally {
     submit.disabled = false;
     submit.removeAttribute('aria-busy');

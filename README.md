@@ -14,7 +14,7 @@ The owner approved this version on 11 November 2026 (Asia/Manila) and requested 
 
 **OpenClaw: start with [OPENCLAW_DEPLOYMENT.md](OPENCLAW_DEPLOYMENT.md).** It covers target discovery, a pinned release, process management, DNS/HTTPS, mail setup, acceptance checks and rollback.
 
-The inquiry recipient is **inquire@hexabridge.com**, as specified by the owner. No real email was tested locally, at the owner's request. Until SMTP is configured, submissions return an honest “not yet connected” message. No inquiry content is written to disk.
+The inquiry recipient is **inquire@hexabridgepng.com**, as specified by the owner. No real email was tested locally, at the owner's request. Until SMTP is configured, submissions return an honest “not yet connected” message. No inquiry content is written to disk.
 
 ## OpenClaw / Tencent Lighthouse deployment
 After visual approval:
@@ -23,7 +23,7 @@ After visual approval:
 3. Copy `.env.example` to `.env` **on the server only**. Set:
    - `PUBLIC_ORIGIN` to the owner's exact approved HTTPS origin (no trailing slash).
    - `SMTP_HOST`, `SMTP_PORT` (587 STARTTLS or 465 TLS), `SMTP_USER`, `SMTP_PASS`, and `SMTP_FROM` using the owner's mail provider.
-   - `SMTP_FROM` must be a provider-verified sender. Inquiries are always addressed to `inquire@hexabridge.com`; Reply-To is the submitter.
+   - `SMTP_FROM` must be a provider-verified sender. Inquiries are always addressed to `inquire@hexabridgepng.com`; Reply-To is the submitter.
    - `HOST=127.0.0.1`, `PORT=4173`. Change the port if already occupied.
    - `TRUST_PROXY=1` only when the reverse proxy overwrites X-Real-IP with the actual client IP and the Node port is inaccessible to external traffic.
 4. Use the existing service manager to keep `node --env-file=.env server.mjs` running with the working directory set to this checkout. Do not put SMTP secrets in service command-line arguments.

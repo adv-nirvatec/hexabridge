@@ -4,14 +4,14 @@
 
 Deploy the owner-approved HexaBridge corporate website from **https://github.com/adv-nirvatec/hexabridge**, branch **main**, to the owner's existing Tencent Lighthouse environment. Use the exact release commit supplied in the owner's handoff message; compare it with GitHub before deployment. Approval was given on **11 November 2026, Asia/Manila**. This document prepares deployment; no server changes have been made by Codex.
 
-Preserve the approved design and content: HexaBridge leads, client-focused solutions come first, the delivery process is prominent, and SurePay appears in one strategic partnership section. No additional partners are named. The recipient for inquiries is **inquire@hexabridge.com**.
+Preserve the approved design and content: HexaBridge leads, client-focused solutions come first, the delivery process is prominent, and SurePay appears in one strategic partnership section. No additional partners are named. The recipient for inquiries is **inquire@hexabridgepng.com**.
 
 ## 1. Resolve the target from the existing environment
 
 Use the owner's established OpenClaw access and deployment conventions. Inspect the selected Lighthouse instance before changing it. Confirm:
 
 - Correct instance, operating system, SSH identity and existing websites.
-- Intended public hostname and canonical origin. The mailbox uses hexabridge.com, but that alone does not establish the approved website hostname or DNS access.
+- Intended public hostname and canonical origin. The mailbox uses hexabridgepng.com, and the approved website hostname is hexabridgepng.com.
 - Existing web server, certificate manager, process manager, application directories and occupied ports.
 - Mail provider, verified sender, mailbox availability and SMTP credentials available through the owner's existing secret-management workflow.
 
@@ -80,7 +80,7 @@ Replace every placeholder. `PUBLIC_ORIGIN` must exactly match the browser's fina
 
 Set `TRUST_PROXY=1` only when Node binds to loopback and the trusted proxy overwrites `X-Real-IP` with the client address. If a CDN or another proxy sits ahead of nginx, configure the trusted real-IP chain correctly; do not trust arbitrary visitor-supplied forwarding headers. Otherwise leave `TRUST_PROXY=0` and account for its shared proxy-IP rate limit.
 
-`SMTP_FROM` must be a sender accepted by the owner's provider. The application always sends to **inquire@hexabridge.com**; Reply-To uses the submitter's address. A mailbox address alone is not an SMTP configuration. Confirm the receiving mailbox exists and configure sender authentication with the provider as needed.
+`SMTP_FROM` must be a sender accepted by the owner's provider. The application always sends to **inquire@hexabridgepng.com**; Reply-To uses the submitter's address. A mailbox address alone is not an SMTP configuration. Confirm the receiving mailbox exists and configure sender authentication with the provider as needed.
 
 No real emails were tested locally, at the owner's request. Without SMTP settings the form deliberately reports that it is not connected; it never reports a fake success. Do not call deployment fully complete until live form delivery is verified. If credentials are unavailable, report that exact remaining dependency and the visible form behavior.
 
@@ -118,7 +118,7 @@ Before declaring success:
 - Check solution-to-inquiry links, EOR category selection, the three collections tabs, phone menu, motion pause, privacy dialog and corporate profile download.
 - Confirm `/assets/hexabridge.css`, `/assets/eor.css` and the generated WebP artwork return successful responses.
 - Confirm `/.env`, `/.git/config`, `/server.mjs`, `/node_modules/` and deployment files are not publicly exposed.
-- Confirm invalid forms produce useful feedback. After SMTP is connected, send one clearly labeled deployment test inquiry to inquire@hexabridge.com under the owner's deployment workflow. Verify it arrives in that mailbox; an SMTP acceptance response alone does not prove inbox delivery. Check spam/provider logs as needed. Do not use real customer data.
+- Confirm invalid forms produce useful feedback. After SMTP is connected, send one clearly labeled deployment test inquiry to inquire@hexabridgepng.com under the owner's deployment workflow. Verify it arrives in that mailbox; an SMTP acceptance response alone does not prove inbox delivery. Check spam/provider logs as needed. Do not use real customer data.
 - Confirm service restart/reboot persistence is configured and that other hosted sites still work.
 
 No database migration is needed. Do not add trackers, third-party form services or change the approved content as part of deployment.
@@ -135,7 +135,7 @@ Instance identifier:
 Deployed full commit SHA:
 Release directory and process/service:
 HTTPS and renewal status:
-Inquiry delivery to inquire@hexabridge.com: verified / pending (reason)
+Inquiry delivery to inquire@hexabridgepng.com: verified / pending (reason)
 Other verification results:
 Previous release and rollback action:
 Any remaining owner action:

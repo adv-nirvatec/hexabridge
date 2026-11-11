@@ -8,7 +8,7 @@ const root = dirname(fileURLToPath(import.meta.url));
 const interests = new Set(['Payments & collections', 'Electronic official receipts (EOR)', 'Digital government', 'Enterprise applications', 'Systems integration', 'Cloud & managed services', 'Data & automation', 'Partner platform demo', 'Other / exploring options']);
 const publicFiles = new Set(['/index.html', '/styles.css', '/script.js']);
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.pdf': 'application/pdf' };
-const mailbox = 'inquire@hexabridge.com';
+const mailbox = 'inquire@hexabridgepng.com';
 
 export function validateInquiry(input) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
@@ -89,7 +89,7 @@ export function createApp({ env = process.env, deliver = mailDelivery(env) } = {
       const attempt = attempts.get(ip) || { count: 0, reset: now + windowMs };
       if (++attempt.count > 5) {
         res.setHeader('Retry-After', String(Math.ceil((attempt.reset - now) / 1000)));
-        return json(res, 429, { message: 'Too many attempts. Please try again later or email inquire@hexabridge.com.' });
+        return json(res, 429, { message: 'Too many attempts. Please try again later or email inquire@hexabridgepng.com.' });
       }
       attempts.set(ip, attempt);
       let bytes = 0;
@@ -107,14 +107,14 @@ export function createApp({ env = process.env, deliver = mailDelivery(env) } = {
         if (input && typeof input.website === 'string' && input.website.trim()) return json(res, 400, { message: 'Please leave the website field empty.' });
         const inquiry = validateInquiry(input);
         if (!inquiry) return json(res, 400, { message: 'Please check the required fields, email address and consent checkbox.' });
-        if (!deliver) return json(res, 503, { message: 'The inquiry form is not yet connected. Please email inquire@hexabridge.com directly.' });
+        if (!deliver) return json(res, 503, { message: 'The inquiry form is not yet connected. Please email inquire@hexabridgepng.com directly.' });
         try {
           await deliver(inquiry);
           return json(res, 200, { sent: true });
         } catch {
           // Never log inquiry content, credentials or SMTP provider responses.
           console.error('Inquiry delivery failed. Check SMTP configuration and provider delivery logs.');
-          return json(res, 502, { message: 'We couldn’t deliver your inquiry. Please email inquire@hexabridge.com directly.' });
+          return json(res, 502, { message: 'We couldn’t deliver your inquiry. Please email inquire@hexabridgepng.com directly.' });
         }
       } catch {
         return json(res, 400, { message: 'Your inquiry could not be read. Please try again.' });
