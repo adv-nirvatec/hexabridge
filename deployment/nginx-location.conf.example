@@ -1,0 +1,12 @@
+# Merge inside the EXISTING HTTPS server block for the approved hostname.
+# Preserve other domains, certificates, redirects and application locations.
+# Node must bind only to 127.0.0.1, not an externally reachable interface.
+location / {
+    proxy_pass http://127.0.0.1:4173;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_read_timeout 40s;
+    client_max_body_size 20k;
+}
