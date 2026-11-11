@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import nodemailer from 'nodemailer';
 
 const root = dirname(fileURLToPath(import.meta.url));
-const interests = new Set(['Payments & collections', 'Digital government', 'Enterprise applications', 'Systems integration', 'Cloud & managed services', 'Data & automation', 'Partner platform demo', 'Other / exploring options']);
+const interests = new Set(['Payments & collections', 'Electronic official receipts (EOR)', 'Digital government', 'Enterprise applications', 'Systems integration', 'Cloud & managed services', 'Data & automation', 'Partner platform demo', 'Other / exploring options']);
 const publicFiles = new Set(['/index.html', '/styles.css', '/script.js']);
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.pdf': 'application/pdf' };
 const mailbox = 'inquire@hexabridge.com';

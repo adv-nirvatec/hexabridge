@@ -13,6 +13,7 @@ const post = (url, body, headers = {}) => fetch(url + '/api/inquiries', { method
 
 test('validates consent, field limits, email and header injection', () => {
   assert.equal(validateInquiry(valid).email, valid.email);
+  assert.equal(validateInquiry({ ...valid, interest: 'Electronic official receipts (EOR)' }).interest, 'Electronic official receipts (EOR)');
   for (const patch of [{ consent: '' }, { email: 'not-email' }, { email: 'person@example.org\r\nBcc: victim@example.org' }, { name: 'X'.repeat(101) }, { message: 'short' }, { interest: 'arbitrary' }, { organization: [] }]) {
     assert.equal(validateInquiry({ ...valid, ...patch }), null);
   }

@@ -42,6 +42,6 @@ Rate limits are in memory per server process; use a single app instance or add s
 Desktop and phone visual checks cover navigation, interactive journey panels, keyboard controls, privacy dialog, motion pause and responsive overflow. SMTP credentials and production delivery remain OpenClaw's deployment task.
 
 ## Content and artwork
-See `ASSETS.md` for the generated image's prompt, provenance, source links and boundaries of partner claims. SurePay products are partner platforms for discovery, not claims that they are deployed or licensed in PNG. The original corporate profile remains downloadable.
+See `ASSETS.md` for the generated image's prompt, provenance, source links and boundaries of partner claims. SurePay products are partner platforms for discovery, not claims that they are deployed or licensed in PNG. EOR Design Solution replaces DocuTrust in the showcase. The proposed Philippine national EOR initiative and LIFT development project are separately identified as partner experience. The original HexaBridge corporate profile remains downloadable; the partner's supplied PDF is not published.
 
 Fonts are requested from Google Fonts with local fallbacks. No analytics, advertising cookies or tracking integrations are configured.
